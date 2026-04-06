@@ -1,0 +1,489 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Build a Brand | Strategic Dominance</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-container": "#dcb7ff",
+                        "primary-fixed-dim": "#47d6ff",
+                        "secondary": "#dcb8ff",
+                        "inverse-primary": "#00677f",
+                        "surface-container-low": "#181b25",
+                        "on-error-container": "#ffdad6",
+                        "on-error": "#690005",
+                        "on-secondary-fixed": "#2c0051",
+                        "on-secondary-fixed-variant": "#6700b5",
+                        "secondary-container": "#7701d0",
+                        "on-tertiary-fixed": "#001f26",
+                        "background": "#0f131c",
+                        "on-surface-variant": "#bbc9cf",
+                        "surface-container-lowest": "#0a0e17",
+                        "surface-container-high": "#262a34",
+                        "outline": "#859399",
+                        "primary-container": "#00d2ff",
+                        "error-container": "#93000a",
+                        "on-primary": "#003543",
+                        "on-primary-fixed": "#001f28",
+                        "error": "#ffb4ab",
+                        "on-secondary": "#480081",
+                        "inverse-surface": "#dfe2ef",
+                        "secondary-fixed": "#efdbff",
+                        "surface-variant": "#31353f",
+                        "primary-fixed": "#b6ebff",
+                        "surface-container-highest": "#31353f",
+                        "surface-container": "#1c1f29",
+                        "tertiary-container": "#5dd0ed",
+                        "secondary-fixed-dim": "#dcb8ff",
+                        "on-primary-fixed-variant": "#004e60",
+                        "surface": "#0f131c",
+                        "on-background": "#dfe2ef",
+                        "tertiary-fixed-dim": "#63d5f3",
+                        "on-tertiary-fixed-variant": "#004e5d",
+                        "surface-dim": "#0f131c",
+                        "on-tertiary-container": "#005768",
+                        "surface-bright": "#353943",
+                        "tertiary": "#9de9ff",
+                        "primary": "#a5e7ff",
+                        "surface-tint": "#47d6ff",
+                        "on-primary-container": "#00566a",
+                        "outline-variant": "#3c494e",
+                        "tertiary-fixed": "#aeecff",
+                        "on-tertiary": "#003641",
+                        "inverse-on-surface": "#2c303a",
+                        "on-surface": "#dfe2ef"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Space Grotesk"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #0a0e17;
+            background-image: 
+                radial-gradient(circle at 50% 50%, rgba(0, 210, 255, 0.05) 0%, transparent 50%),
+                linear-gradient(rgba(10, 14, 23, 0.97), rgba(10, 14, 23, 0.97)),
+                url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2300d2ff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            color: #dfe2ef;
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            letter-spacing: -0.02em;
+        }
+        .glass {
+            background: rgba(49, 53, 63, 0.4);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #a5e7ff 0%, #00d2ff 100%);
+        }
+        .card-glow:hover {
+            box-shadow: 0 0 30px 0 rgba(0, 210, 255, 0.15);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .blueprint-grid {
+            background-image: 
+                linear-gradient(rgba(0, 210, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 210, 255, 0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .circuit-line {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: dash 5s linear infinite;
+        }
+        @keyframes dash {
+            to { stroke-dashoffset: 0; }
+        }
+    </style>
+</head>
+<body class="selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-900/60 backdrop-blur-xl bg-gradient-to-b from-slate-900/80 to-transparent shadow-[0_8px_32px_0_rgba(0,210,255,0.08)]">
+<div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-slate-50 font-['Space_Grotesk']" style="">Build a Brand</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-slate-400 font-medium hover:text-slate-100 transition-colors text-[#00D2FF] font-semibold border-b-2 border-[#00D2FF] pb-1" href="index.html" style="">HOME</a>
+<a class="text-slate-400 font-medium hover:text-slate-100 transition-colors" href="contact.html" style="">CONTACT</a>
+<a class="text-slate-400 font-medium hover:text-slate-100 transition-colors" href="game.html" style="">GAME</a>
+</nav>
+<button onclick="window.location.href='contact.html?interest=website#lead-form';" class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-sm font-bold tracking-tight hover:scale-105 active:scale-95 transition-all duration-300" style="">Book a Call</button>
+</div>
+</header>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center px-8 max-w-7xl mx-auto overflow-hidden">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="z-10">
+<span class="text-primary-container font-['JetBrains_Mono'] tracking-[0.2em] text-sm uppercase mb-4 block" style="">Engineered Performance</span>
+<h1 class="text-6xl md:text-7xl font-bold leading-[1.1] text-slate-50 mb-6" style="">Websites That Turn <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary" style="">Traffic Into Revenue</span></h1>
+<p class="text-xl text-slate-400 mb-8 max-w-xl leading-relaxed" style="">
+                        We build wealth-generating digital systems for South African businesses. If your website isn’t converting, <span class="text-secondary font-bold" style="">it’s costing you money.</span>
+</p>
+<div class="flex flex-wrap gap-4">
+<button onclick="window.location.href='contact.html?interest=audit#lead-form';" class="hero-gradient text-on-primary-container px-8 py-4 rounded-sm font-bold text-lg shadow-[0_10px_20px_-5px_rgba(0,210,255,0.4)] hover:shadow-[0_15px_30px_-5px_rgba(0,210,255,0.6)] transition-all" style="">Get a Website Audit</button>
+<button onclick="window.location.href='contact.html?interest=website#lead-form';" class="glass px-8 py-4 rounded-sm font-bold text-lg border border-outline-variant/20 hover:bg-surface-container-highest transition-colors" style="">Book a Call</button>
+</div>
+</div>
+<div class="relative">
+<!-- Blueprint Technical Replacement for Dashboard -->
+<div class="glass p-8 rounded-xl border border-primary/20 shadow-2xl rotate-3 hover:rotate-0 transition-all duration-700 aspect-video flex flex-col items-center justify-center blueprint-grid relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5"></div>
+<svg class="w-full h-full opacity-60" fill="none" viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg">
+<path class="circuit-line" d="M40 200 L120 120 L200 160 L360 40" stroke="url(#paint0_linear)" stroke-linecap="round" stroke-width="4"></path>
+<circle cx="40" cy="200" fill="#47d6ff" r="4"></circle>
+<circle cx="120" cy="120" fill="#47d6ff" r="4"></circle>
+<circle cx="200" cy="160" fill="#dcb8ff" r="4"></circle>
+<circle cx="360" cy="40" fill="#dcb8ff" r="4"></circle>
+<rect fill="rgba(0, 210, 255, 0.1)" height="20" rx="2" stroke="#47d6ff" stroke-width="0.5" width="80" x="40" y="40"></rect>
+<rect fill="rgba(220, 184, 255, 0.05)" height="10" rx="2" stroke="#dcb8ff" stroke-width="0.5" width="120" x="40" y="70"></rect>
+<defs>
+<linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear" x1="40" x2="360" y1="200" y2="40">
+<stop stop-color="#47D6FF"></stop>
+<stop offset="1" stop-color="#DCB8FF"></stop>
+</linearGradient>
+</defs>
+</svg>
+<div class="mt-4 font-['JetBrains_Mono'] text-[10px] text-primary/60 tracking-tighter uppercase" style="">System Architecture v2.04 // Pipeline_Revenue_Growth</div>
+</div>
+<div class="absolute -bottom-8 -left-8 glass p-6 rounded-lg border border-primary/20 shadow-xl hidden lg:block">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: &quot;FILL&quot; 1;">trending_up</span>
+</div>
+<div>
+<div class="text-2xl font-bold text-white" style="">+142%</div>
+<div class="text-xs text-slate-400 font-['JetBrains_Mono'] uppercase tracking-widest" style="">Revenue Growth</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Problem Section -->
+<section class="py-32 px-8 max-w-7xl mx-auto">
+<div class="text-center mb-20">
+<h2 class="text-4xl md:text-5xl font-bold text-slate-50 mb-6" style="">Most Websites Don’t Work — <span class="text-slate-500" style="">They Just Exist</span></h2>
+<p class="text-slate-400 max-w-2xl mx-auto text-lg italic" style="">"We create a system tailored to your specific business needs, not just another online brochure."</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="glass p-8 rounded-sm border border-outline-variant/10 card-glow transition-all">
+<span class="material-symbols-outlined text-primary text-4xl mb-6" style="">error_outline</span>
+<h3 class="text-xl font-bold mb-4" style="">Outdated design damages credibility</h3>
+<p class="text-slate-400 text-sm" style="">First impressions happen in 0.05 seconds. A dated site kills trust instantly.</p>
+</div>
+<div class="glass p-8 rounded-sm border border-outline-variant/10 card-glow transition-all">
+<span class="material-symbols-outlined text-primary text-4xl mb-6" style="">speed</span>
+<h3 class="text-xl font-bold mb-4" style="">Slow speeds drive users away</h3>
+<p class="text-slate-400 text-sm" style="">Every second of delay reduces conversions by 7%. Speed is non-negotiable.</p>
+</div>
+<div class="glass p-8 rounded-sm border border-outline-variant/10 card-glow transition-all">
+<span class="material-symbols-outlined text-primary text-4xl mb-6" style="">strategy</span>
+<h3 class="text-xl font-bold mb-4" style="">No conversion strategy</h3>
+<p class="text-slate-400 text-sm" style="">A website without a strategy is just a liability. We build for the bottom line.</p>
+</div>
+<div class="glass p-8 rounded-sm border border-outline-variant/10 card-glow transition-all">
+<span class="material-symbols-outlined text-primary text-4xl mb-6" style="">person_cancel</span>
+<h3 class="text-xl font-bold mb-4" style="">Visitors don’t convert</h3>
+<p class="text-slate-400 text-sm" style="">Traffic is vanity; conversion is sanity. We fix the leaks in your funnel.</p>
+</div>
+</div>
+</section>
+<!-- Solution Section -->
+<section class="py-32 bg-surface-container-lowest relative overflow-hidden" id="services">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div>
+<h2 class="text-4xl md:text-6xl font-bold text-slate-50 mb-8 leading-tight" style="">The Revenue <br>Website System™</h2>
+<p class="text-xl text-slate-400 mb-12 leading-relaxed" style="">
+                        We don't just "make websites." We build strategic business engines engineered for leads, sales, and long-term dominance.
+                    </p>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<div class="mt-1 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: &quot;FILL&quot; 1;">check</span>
+</div>
+<div>
+<h4 class="text-lg font-bold text-slate-200" style="">Conversion-focused</h4>
+<p class="text-slate-500" style="">Every pixel serves a single purpose: moving the user toward a conversion.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="mt-1 w-6 h-6 rounded-full bg-secondary/20 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: &quot;FILL&quot; 1;">check</span>
+</div>
+<div>
+<h4 class="text-lg font-bold text-slate-200" style="">Tailored Architecture</h4>
+<p class="text-slate-500" style="">No templates. We build bespoke systems designed specifically for your SA business.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="mt-1 w-6 h-6 rounded-full bg-tertiary/20 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: &quot;FILL&quot; 1;">check</span>
+</div>
+<div>
+<h4 class="text-lg font-bold text-slate-200" style="">Strategic Data</h4>
+<p class="text-slate-500" style="">Decisions driven by analytics and heatmaps, not just aesthetic opinions.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<!-- Technical Grid Replacement for Workspace Image -->
+<div class="rounded-xl shadow-2xl aspect-square glass border border-primary/20 flex items-center justify-center blueprint-grid overflow-hidden">
+<div class="grid grid-cols-4 grid-rows-4 gap-4 p-12 w-full h-full">
+<div class="border border-primary/40 rounded bg-primary/5 flex items-center justify-center"><span class="material-symbols-outlined text-primary/40" style="">hub</span></div>
+<div class="border border-secondary/40 rounded bg-secondary/5"></div>
+<div class="border border-primary/40 rounded bg-primary/5"></div>
+<div class="border border-secondary/40 rounded bg-secondary/5 flex items-center justify-center"><span class="material-symbols-outlined text-secondary/40" style="">settings_input_component</span></div>
+<div class="border border-secondary/40 rounded bg-secondary/5"></div>
+<div class="border border-primary/40 rounded bg-primary/20 flex items-center justify-center shadow-[0_0_15px_rgba(0,210,255,0.3)]"><span class="material-symbols-outlined text-primary" style="">analytics</span></div>
+<div class="border border-primary/40 rounded bg-primary/5"></div>
+<div class="border border-secondary/40 rounded bg-secondary/5"></div>
+<div class="border border-primary/40 rounded bg-primary/5"></div>
+<div class="border border-primary/40 rounded bg-primary/5"></div>
+<div class="border border-secondary/40 rounded bg-secondary/20 flex items-center justify-center shadow-[0_0_15px_rgba(220,184,255,0.3)]"><span class="material-symbols-outlined text-secondary" style="">database</span></div>
+<div class="border border-primary/40 rounded bg-primary/5"></div>
+<div class="border border-secondary/40 rounded bg-secondary/5 flex items-center justify-center"><span class="material-symbols-outlined text-secondary/40" style="">monitoring</span></div>
+<div class="border border-primary/40 rounded bg-primary/5"></div>
+<div class="border border-secondary/40 rounded bg-secondary/5"></div>
+<div class="border border-primary/40 rounded bg-primary/20 flex items-center justify-center shadow-[0_0_15px_rgba(0,210,255,0.3)]"><span class="material-symbols-outlined text-primary" style="">rocket</span></div>
+</div>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+</div>
+</div>
+</section>
+<!-- Value Stack (Bento) -->
+<section class="py-32 px-8 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-full">
+<div class="md:col-span-2 glass p-8 rounded-sm border border-outline-variant/10 flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-[120px] text-primary" style="">account_tree</span>
+</div>
+<div class="relative z-10">
+<span class="text-primary font-['JetBrains_Mono'] text-xs mb-2 block uppercase" style="">Foundational</span>
+<h3 class="text-2xl font-bold text-slate-50 mb-4" style="">Revenue Strategy</h3>
+<p class="text-slate-400" style="">Mapping the entire customer journey before a single line of code is written.</p>
+</div>
+</div>
+<div class="glass p-8 rounded-sm border border-outline-variant/10 flex flex-col justify-between">
+<span class="material-symbols-outlined text-secondary text-3xl" style="">brush</span>
+<h3 class="text-xl font-bold text-slate-50 mt-4" style="">Custom Design</h3>
+</div>
+<div class="glass p-8 rounded-sm border border-outline-variant/10 flex flex-col justify-between">
+<span class="material-symbols-outlined text-primary text-3xl" style="">smartphone</span>
+<h3 class="text-xl font-bold text-slate-50 mt-4" style="">Mobile-first</h3>
+</div>
+<div class="glass p-8 rounded-sm border border-outline-variant/10 flex flex-col justify-between">
+<span class="material-symbols-outlined text-tertiary text-3xl" style="">rocket_launch</span>
+<h3 class="text-xl font-bold text-slate-50 mt-4" style="">Performance</h3>
+</div>
+<div class="md:col-span-2 glass p-8 rounded-sm border border-outline-variant/10 flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-4 -bottom-4 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-[120px] text-secondary" style="">input_circle</span>
+</div>
+<div class="relative z-10">
+<h3 class="text-2xl font-bold text-slate-50 mb-4" style="">Lead Capture Systems</h3>
+<p class="text-slate-400" style="">Smart forms and CTAs that actually convert "just looking" into high-intent leads.</p>
+</div>
+<div class="flex gap-2 mt-4 relative z-10">
+<span class="px-3 py-1 bg-surface-container-highest rounded-full text-[10px] text-primary uppercase font-bold tracking-tighter" style="">Automated</span>
+<span class="px-3 py-1 bg-surface-container-highest rounded-full text-[10px] text-primary uppercase font-bold tracking-tighter" style="">Integrated</span>
+</div>
+</div>
+<div class="glass p-8 rounded-sm border border-outline-variant/10 flex flex-col justify-between">
+<span class="material-symbols-outlined text-secondary text-3xl" style="">monitoring</span>
+<h3 class="text-xl font-bold text-slate-50 mt-4" style="">Tracking &amp; Analytics</h3>
+</div>
+</div>
+<div class="mt-12 text-center">
+<p class="text-slate-500 font-medium" style="">Every element is engineered to turn attention into <span class="text-primary-container" style="">measurable results.</span></p>
+</div>
+</section>
+<!-- Process Section -->
+<section class="py-32 px-8 max-w-7xl mx-auto overflow-x-hidden" id="process">
+<h2 class="text-4xl font-bold text-center text-slate-50 mb-20" style="">The Build a Brand <br><span class="text-secondary" style="">Conversion Framework™</span></h2>
+<div class="relative flex flex-col md:flex-row justify-between items-start gap-12">
+<div class="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-outline-variant/30 to-transparent hidden md:block"></div>
+<div class="relative z-10 w-full md:w-1/4">
+<div class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold mb-6" style="">1</div>
+<h4 class="text-lg font-bold text-slate-100 mb-3" style="">Strategy</h4>
+<p class="text-slate-400 text-sm" style="">Market research and goal alignment.</p>
+</div>
+<div class="relative z-10 w-full md:w-1/4">
+<div class="w-12 h-12 bg-surface-container-highest text-primary border border-primary/40 rounded-full flex items-center justify-center font-bold mb-6" style="">2</div>
+<h4 class="text-lg font-bold text-slate-100 mb-3" style="">Conversion Architecture</h4>
+<p class="text-slate-400 text-sm" style="">Building the technical blueprint for sales.</p>
+</div>
+<div class="relative z-10 w-full md:w-1/4">
+<div class="w-12 h-12 bg-surface-container-highest text-primary border border-primary/40 rounded-full flex items-center justify-center font-bold mb-6" style="">3</div>
+<h4 class="text-lg font-bold text-slate-100 mb-3" style="">Design &amp; Development</h4>
+<p class="text-slate-400 text-sm" style="">Bespoke creation with clean code.</p>
+</div>
+<div class="relative z-10 w-full md:w-1/4">
+<div class="w-12 h-12 bg-secondary text-on-secondary rounded-full flex items-center justify-center font-bold mb-6" style="">4</div>
+<h4 class="text-lg font-bold text-slate-100 mb-3" style="">Optimization &amp; Launch</h4>
+<p class="text-slate-400 text-sm" style="">Final polishing and performance tuning.</p>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-32 px-8 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="glass p-10 rounded-xl border border-outline-variant/10 relative">
+<div class="absolute -top-4 left-10 text-primary-container opacity-20">
+<span class="material-symbols-outlined text-6xl" style="font-variation-settings: &quot;FILL&quot; 1;">format_quote</span>
+</div>
+<p class="text-slate-300 italic mb-8 relative z-10" style="">"Our conversion rate jumped from 1.2% to 4.8% within the first month. The system paid for itself in weeks."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center text-primary/50 text-xs" style="">MS</div>
+<div>
+<div class="font-bold text-slate-100" style="">Michael S.</div>
+<div class="text-xs text-slate-500" style="">Tech Solutions SA</div>
+</div>
+</div>
+</div>
+<div class="glass p-10 rounded-xl border border-outline-variant/10 relative shadow-[0_20px_50px_-10px_rgba(165,231,255,0.1)]">
+<div class="absolute -top-4 left-10 text-primary-container opacity-20">
+<span class="material-symbols-outlined text-6xl" style="font-variation-settings: &quot;FILL&quot; 1;">format_quote</span>
+</div>
+<p class="text-slate-300 italic mb-8 relative z-10" style="">"Professional, strategic, and actually understands the South African market. Highly recommended."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full border border-secondary/30 flex items-center justify-center text-secondary/50 text-xs" style="">TM</div>
+<div>
+<div class="font-bold text-slate-100" style="">Thabo M.</div>
+<div class="text-xs text-slate-500" style="">Strategic Logistics</div>
+</div>
+</div>
+</div>
+<div class="glass p-10 rounded-xl border border-outline-variant/10 relative">
+<div class="absolute -top-4 left-10 text-primary-container opacity-20">
+<span class="material-symbols-outlined text-6xl" style="font-variation-settings: &quot;FILL&quot; 1;">format_quote</span>
+</div>
+<p class="text-slate-300 italic mb-8 relative z-10" style="">"Finally, a web agency that cares about revenue more than just 'pretty pixels'. Incredible work."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full border border-tertiary/30 flex items-center justify-center text-tertiary/50 text-xs" style="">LK</div>
+<div>
+<div class="font-bold text-slate-100" style="">Leila K.</div>
+<div class="text-xs text-slate-500" style="">Luxury Homes Cape Town</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Entry Offer -->
+<section class="py-24 px-8">
+<div class="max-w-5xl mx-auto hero-gradient p-1 rounded-sm">
+<div class="bg-surface-container-lowest p-12 md:p-20 text-center rounded-sm relative overflow-hidden blueprint-grid">
+<div class="absolute inset-0 bg-gradient-to-b from-surface-container-lowest/50 to-surface-container-lowest"></div>
+<div class="relative z-10">
+<h2 class="text-4xl md:text-5xl font-bold text-slate-50 mb-6" style="">Get a Professional Website Audit</h2>
+<p class="text-slate-400 text-lg mb-12 max-w-2xl mx-auto" style="">Receive a full technical breakdown, conversion insights, and an actionable plan to turn your site into a revenue machine. <span class="text-primary-container font-bold" style="">Value: R2,500 - Yours Free.</span></p>
+<button onclick="window.location.href='contact.html?interest=audit#lead-form';" class="hero-gradient text-on-primary-container px-10 py-5 rounded-sm font-bold text-xl shadow-xl hover:scale-105 transition-transform" style="">Claim Your Free Audit</button>
+</div>
+</div>
+</div>
+</section>
+<!-- SEO Packages -->
+<section class="py-32 px-8 max-w-7xl mx-auto" id="pricing">
+<h2 class="text-4xl font-bold text-center text-slate-50 mb-20" style="">Strategic SEO Packages</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Package 1 -->
+<div class="glass p-8 rounded-sm border border-outline-variant/10 flex flex-col">
+<div class="text-slate-500 font-['JetBrains_Mono'] text-xs uppercase mb-4 tracking-widest" style="">Entry Level</div>
+<h3 class="text-2xl font-bold text-slate-50 mb-2" style="">Starter</h3>
+<div class="text-4xl font-black text-primary mb-8" style="">R1,500<span class="text-sm font-normal text-slate-500" style="">/mo</span></div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-3 text-slate-400 text-sm" style=""><span class="material-symbols-outlined text-primary text-sm" style="">done</span>Keyword research &amp; basic targeting</li>
+<li class="flex items-center gap-3 text-slate-400 text-sm" style=""><span class="material-symbols-outlined text-primary text-sm" style="">done</span>On-page SEO setup (titles, meta, structure)</li>
+<li class="flex items-center gap-3 text-slate-400 text-sm" style=""><span class="material-symbols-outlined text-primary text-sm" style="">done</span>Google Business optimization</li>
+</ul>
+<button onclick="window.location.href='contact.html?interest=seo&plan=starter#lead-form';" class="w-full py-3 glass border border-outline-variant/30 font-bold hover:bg-surface-container-highest transition-colors" style="">Select Plan</button>
+</div>
+<!-- Package 2 (Highlighted) -->
+<div class="glass p-8 rounded-sm border-2 border-primary shadow-[0_0_40px_rgba(0,210,255,0.1)] flex flex-col scale-105 z-10 relative">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-on-primary px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest" style="">Recommended</div>
+<div class="text-primary font-['JetBrains_Mono'] text-xs uppercase mb-4 tracking-widest" style="">Rapid Scaling</div>
+<h3 class="text-2xl font-bold text-slate-50 mb-2" style="">Growth</h3>
+<div class="text-4xl font-black text-primary mb-8" style="">R3,000<span class="text-sm font-normal text-slate-500" style="">/mo</span></div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-3 text-slate-200 text-sm font-semibold" style=""><span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: &quot;FILL&quot; 1;">done</span>EVERYTHING in Starter</li>
+<li class="flex items-center gap-3 text-slate-200 text-sm font-semibold" style=""><span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: &quot;FILL&quot; 1;">done</span>Expansive keyword targeting</li>
+<li class="flex items-center gap-3 text-slate-200 text-sm font-semibold" style=""><span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: &quot;FILL&quot; 1;">done</span>Ongoing on-page optimization</li>
+<li class="flex items-center gap-3 text-slate-200 text-sm font-semibold" style=""><span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: &quot;FILL&quot; 1;">done</span>Content improvements &amp; structuring</li>
+</ul>
+<button onclick="window.location.href='contact.html?interest=seo&plan=growth#lead-form';" class="w-full py-3 hero-gradient text-on-primary-container font-bold shadow-lg" style="">Select Plan</button>
+</div>
+<!-- Package 3 -->
+<div class="glass p-8 rounded-sm border border-outline-variant/10 flex flex-col">
+<div class="text-slate-500 font-['JetBrains_Mono'] text-xs uppercase mb-4 tracking-widest" style="">Dominance</div>
+<h3 class="text-2xl font-bold text-slate-50 mb-2" style="">Authority</h3>
+<div class="text-4xl font-black text-primary mb-8" style="">R7,500<span class="text-sm font-normal text-slate-500" style="">/mo</span></div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex items-center gap-3 text-slate-400 text-sm" style=""><span class="material-symbols-outlined text-primary text-sm" style="">done</span>EVERYTHING in Starter + Growth</li>
+<li class="flex items-center gap-3 text-slate-400 text-sm" style=""><span class="material-symbols-outlined text-primary text-sm" style="">done</span>Advanced SEO strategy &amp; competitor analysis</li>
+<li class="flex items-center gap-3 text-slate-400 text-sm" style=""><span class="material-symbols-outlined text-primary text-sm" style="">done</span> Dedicated Strategist</li>
+</ul>
+<button onclick="window.location.href='contact.html?interest=seo&plan=authority#lead-form';" class="w-full py-3 glass border border-outline-variant/30 font-bold hover:bg-surface-container-highest transition-colors" style="">Select Plan</button>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-32 px-8 text-center bg-gradient-to-t from-surface-container-lowest to-transparent relative">
+<div class="max-w-4xl mx-auto relative z-10">
+<h2 class="text-5xl md:text-7xl font-bold text-slate-50 mb-8" style="">Let’s Build a System That <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary" style="">Scales Your Business</span></h2>
+<p class="text-xl text-slate-400 mb-12" style="">Stop treating your website like a digital business card. Start treating it like your most valuable employee.</p>
+<div class="flex flex-wrap justify-center gap-6">
+<button onclick="window.location.href='contact.html?interest=website#lead-form';" class="hero-gradient text-on-primary-container px-12 py-5 rounded-sm font-bold text-xl" style="">Build a Website</button>
+<button onclick="window.location.href='contact.html?interest=audit#lead-form';" class="glass px-12 py-5 rounded-sm font-bold text-xl border border-outline-variant/20 hover:bg-surface-container-highest" style="">Get a Website Audit</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-950 w-full py-16 px-8 mt-auto border-t border-outline-variant/5">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-7xl mx-auto">
+<div>
+<div class="text-xl font-black text-slate-100 font-['Space_Grotesk'] mb-4" style="">Build a Brand</div>
+<p class="text-slate-500 font-['Inter'] text-sm leading-relaxed max-w-xs" style="">© 2024 Build a Brand. Strategic Dominance in South African Tech.</p>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-4">
+<a class="block text-slate-500 hover:text-[#a5e7ff] transition-colors hover:translate-x-1 duration-200 text-sm" href="#" style=""><br></a>
+<a class="block text-slate-500 hover:text-[#a5e7ff] transition-colors hover:translate-x-1 duration-200 text-sm" href="#" style=""><br></a>
+<a class="block text-slate-500 hover:text-[#a5e7ff] transition-colors hover:translate-x-1 duration-200 text-sm" href="#" style=""><br></a>
+</div>
+<div class="space-y-4">
+<a class="block text-slate-500 hover:text-[#a5e7ff] transition-colors hover:translate-x-1 duration-200 text-sm" href="#" style=""><br></a>
+<a class="block text-slate-500 hover:text-[#a5e7ff] transition-colors hover:translate-x-1 duration-200 text-sm" href="#" style=""><br></a>
+<a class="block text-slate-500 hover:text-[#a5e7ff] transition-colors hover:translate-x-1 duration-200 text-sm" href="#" style=""><br></a>
+</div>
+</div>
+<div class="text-right flex flex-col items-end">
+<span class="text-xs font-['JetBrains_Mono'] text-slate-600 uppercase tracking-widest mb-4" style="">Focus Area</span>
+<span class="text-[#00D2FF] font-bold" style="">South Africa | Global Scale</span>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,427 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-lowest": "#0a0e17",
+                    "surface-tint": "#47d6ff",
+                    "on-tertiary-fixed-variant": "#004e5d",
+                    "outline": "#859399",
+                    "surface-container": "#1c1f29",
+                    "on-error-container": "#ffdad6",
+                    "tertiary": "#9de9ff",
+                    "on-surface-variant": "#bbc9cf",
+                    "on-tertiary-container": "#005768",
+                    "primary-fixed-dim": "#47d6ff",
+                    "on-background": "#dfe2ef",
+                    "surface-dim": "#0f131c",
+                    "on-secondary": "#480081",
+                    "background": "#0f131c",
+                    "tertiary-fixed": "#aeecff",
+                    "surface": "#0f131c",
+                    "tertiary-container": "#5dd0ed",
+                    "on-primary-fixed": "#001f28",
+                    "tertiary-fixed-dim": "#63d5f3",
+                    "on-secondary-fixed": "#2c0051",
+                    "surface-container-low": "#181b25",
+                    "surface-container-highest": "#31353f",
+                    "on-tertiary-fixed": "#001f26",
+                    "on-secondary-fixed-variant": "#6700b5",
+                    "inverse-on-surface": "#2c303a",
+                    "inverse-primary": "#00677f",
+                    "inverse-surface": "#dfe2ef",
+                    "surface-container-high": "#262a34",
+                    "secondary-fixed-dim": "#dcb8ff",
+                    "on-secondary-container": "#dcb7ff",
+                    "on-primary-fixed-variant": "#004e60",
+                    "on-tertiary": "#003641",
+                    "on-primary-container": "#00566a",
+                    "surface-bright": "#353943",
+                    "primary-fixed": "#b6ebff",
+                    "on-primary": "#003543",
+                    "on-error": "#690005",
+                    "secondary": "#dcb8ff",
+                    "primary-container": "#00d2ff",
+                    "on-surface": "#dfe2ef",
+                    "surface-variant": "#31353f",
+                    "error-container": "#93000a",
+                    "secondary-fixed": "#efdbff",
+                    "error": "#ffb4ab",
+                    "outline-variant": "#3c494e",
+                    "secondary-container": "#7701d0",
+                    "primary": "#a5e7ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Inter"],
+                    "label": ["Space Grotesk"],
+                    "mono": ["JetBrains Mono"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-headline { font-family: 'Space Grotesk', sans-serif; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        .glass {
+            background: rgba(49, 53, 63, 0.6);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+        @keyframes targetSpawn {
+            0% { transform: scale(0) rotate(45deg); opacity: 0; }
+            50% { transform: scale(1.2) rotate(-10deg); opacity: 1; }
+            100% { transform: scale(1) rotate(0deg); opacity: 1; }
+        }
+        .animate-target-spawn {
+            animation: targetSpawn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary/30 selection:text-primary min-h-screen">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-900/60 backdrop-blur-xl shadow-[0_0_20px_rgba(0,210,255,0.08)]">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent font-['Space_Grotesk'] tracking-tight" style="">
+                Build a Brand
+            </div>
+<div class="hidden md:flex items-center gap-8 font-['Space_Grotesk'] tracking-tight">
+<a class="text-slate-400 hover:text-white transition-colors" href="index.html" style="">HOME</a>
+<a class="text-slate-400 hover:text-white transition-colors" href="contact.html" style="">CONTACT</a>
+<a class="text-slate-400 hover:text-white transition-colors text-[#00D2FF] font-semibold border-b-2 border-[#00D2FF] pb-1" href="game.html" style="">GAME</a>
+<button onclick="window.location.href='contact.html?interest=website#lead-form';" class="bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold px-6 py-2 rounded-sm scale-95 active:scale-90 transition-all duration-300 shadow-[0_0_15px_rgba(165,231,255,0.3)]" style="">
+                    Book a Call
+                </button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-6 max-w-7xl mx-auto overflow-hidden">
+<!-- Intro Section -->
+<header class="text-center mb-16 relative">
+<div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-primary/10 blur-[120px] rounded-full pointer-events-none"></div>
+<h1 class="text-5xl md:text-7xl font-headline font-bold tracking-tighter mb-6" style="">
+                Test Your <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent" style="">Speed</span>
+</h1>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto leading-relaxed" style="">
+                Speed matters. In this game, and on your website. See how fast you really are. High performance is the bridge between attention and conversion.
+            </p>
+</header>
+<!-- Mini-Game Container -->
+<section class="relative group">
+<!-- Decorative Glows -->
+<div class="absolute -left-20 top-1/2 -translate-y-1/2 w-64 h-64 bg-secondary/10 blur-[100px] rounded-full"></div>
+<div class="absolute -right-20 bottom-0 w-80 h-80 bg-primary/10 blur-[100px] rounded-full"></div>
+<div class="glass max-w-4xl mx-auto aspect-video rounded-xl border border-outline-variant/10 relative overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+<!-- Game HUD -->
+<div class="absolute top-0 left-0 w-full p-6 flex justify-between items-center z-10">
+<div class="flex items-center gap-4">
+<div class="bg-surface-container-low px-4 py-2 rounded-sm border-l-2 border-primary">
+<span class="text-xs font-mono uppercase tracking-widest text-on-surface-variant" style="">Score</span>
+<div id="game-score" class="text-2xl font-mono font-bold text-primary" style="">00</div>
+</div>
+<div class="bg-surface-container-low px-4 py-2 rounded-sm border-l-2 border-secondary">
+<span class="text-xs font-mono uppercase tracking-widest text-on-surface-variant" style="">Timer</span>
+<div id="game-timer" class="text-2xl font-mono font-bold text-secondary" style="">30s</div>
+</div>
+</div>
+<div class="text-xs font-mono text-on-surface-variant/40 flex items-center gap-2" style="">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                        SYSTEM ACTIVE
+                    </div>
+</div>
+<!-- Interaction Area / Targets -->
+<div id="game-area" onmousedown="missClick()" class="w-full h-full relative cursor-crosshair overflow-hidden touch-none select-none">
+<!-- Ambient Grid Pattern Overlay -->
+<div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: radial-gradient(#fff 1px, transparent 0); background-size: 40px 40px;"></div>
+</div>
+<!-- Overlay for Start State -->
+<div id="game-overlay" class="absolute inset-0 bg-surface-container-lowest/80 backdrop-blur-sm flex flex-col items-center justify-center z-20 transition-opacity duration-300">
+<div class="text-center p-8">
+<span id="game-overlay-icon" class="material-symbols-outlined text-6xl text-primary mb-4" data-weight="fill" style="">bolt</span>
+<h2 id="game-overlay-title" class="text-3xl font-headline font-bold mb-6" style="">Initialize Speed Test</h2>
+<p id="game-overlay-final-score" class="text-on-surface-variant mb-6 hidden"></p>
+<button id="game-start-btn" onclick="startGame()" class="bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold px-10 py-4 rounded-sm text-lg hover:shadow-[0_0_30px_rgba(0,210,255,0.4)] transition-all" style="">
+                            BEGIN OPERATION
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Insights & Conversion Section -->
+<section class="mt-32 max-w-4xl mx-auto">
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div class="space-y-8">
+<div class="space-y-2">
+<h3 class="text-sm font-mono text-primary uppercase tracking-[0.3em]" style="">Diagnostic Data</h3>
+<h2 class="text-4xl font-headline font-bold leading-tight" style="">Your Speed Score: <span id="diagnostic-score" class="text-primary-container italic" style="">PENDING</span></h2>
+</div>
+<p class="text-on-surface-variant text-lg leading-relaxed" style="">
+                        Speed directly impacts performance. Slow websites lose customers before they even engage. Every millisecond counts toward your final conversion rate and brand authority.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button onclick="window.location.href='contact.html?interest=audit#lead-form';" class="bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold px-8 py-4 rounded-sm flex items-center justify-center gap-2 transition-all hover:scale-[1.02]" style="">
+                            Get a Website Audit
+                            <span class="material-symbols-outlined text-sm" style="">trending_up</span>
+</button>
+<button onclick="window.location.href='contact.html?interest=website#lead-form';" class="border border-outline-variant/30 text-on-surface font-bold px-8 py-4 rounded-sm transition-all hover:bg-surface-variant" style="">
+                            Book a Call
+                        </button>
+</div>
+</div>
+<!-- Performance Card -->
+<div class="bg-surface-container-low p-8 rounded-xl border-l-4 border-secondary shadow-xl">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary" style="">monitoring</span>
+</div>
+<h4 class="font-headline font-bold text-xl" style="">System Insight</h4>
+</div>
+<p class="text-sm text-on-surface-variant mb-8 font-body leading-loose" style="">
+                        "Performance isn't just about loading assets; it's about reducing the cognitive load on your users. A sovereign interface commands attention by responding instantly."
+                    </p>
+<div class="space-y-4">
+<div class="flex justify-between text-xs font-mono text-on-surface-variant">
+<span class="" style="">OPTIMIZATION LEVEL</span>
+<span class="" style="">98%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full w-[98%] shadow-[0_0_10px_rgba(220,184,255,0.5)]"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Banner -->
+<section class="mt-32 glass border border-outline-variant/10 rounded-xl p-12 text-center relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8 opacity-10">
+<span class="material-symbols-outlined text-9xl" style="">rocket_launch</span>
+</div>
+<h2 class="text-4xl font-headline font-bold mb-4" style="">Is Your Website This Fast?</h2>
+<p class="text-on-surface-variant max-w-xl mx-auto mb-10" style="">
+                We build high-performance websites designed to load fast, engage users, and convert. The future belongs to those who move at the speed of thought.
+            </p>
+<div class="flex justify-center gap-4">
+<div class="px-6 py-2 bg-surface-container rounded-full text-xs font-mono text-tertiary border border-tertiary/20" style="">
+                    Sovereign Architecture
+                </div>
+<div class="px-6 py-2 bg-surface-container rounded-full text-xs font-mono text-tertiary border border-tertiary/20" style="">
+                    High Conversion
+                </div>
+</div>
+</section>
+<script>
+    const TARGET_LIFETIME_MS = 1500;
+    const GAME_DURATION = 30; // seconds
+    let score = 0;
+    let timer = GAME_DURATION;
+    let gameInterval;
+    let spawnInterval;
+    let currentSpawnRate = 1000;
+    let isPlaying = false;
+
+    const scoreEl = document.getElementById('game-score');
+    const timerEl = document.getElementById('game-timer');
+    const diagnosticScoreEl = document.getElementById('diagnostic-score');
+    
+    const overlay = document.getElementById('game-overlay');
+    const overlayTitle = document.getElementById('game-overlay-title');
+    const overlayIcon = document.getElementById('game-overlay-icon');
+    const finalScoreEl = document.getElementById('game-overlay-final-score');
+    const startBtn = document.getElementById('game-start-btn');
+    const gameArea = document.getElementById('game-area');
+
+    function startGame() {
+        if(isPlaying) return;
+        isPlaying = true;
+        score = 0;
+        timer = GAME_DURATION;
+        currentSpawnRate = 1000;
+        updateUI();
+        
+        overlay.classList.add('opacity-0', 'pointer-events-none');
+        finalScoreEl.classList.add('hidden');
+        
+        diagnosticScoreEl.innerText = "TEST IN PROGRESS...";
+        diagnosticScoreEl.className = "text-surface-variant italic animate-pulse";
+
+        gameInterval = setInterval(() => {
+            timer--;
+            updateUI();
+            if(timer <= 0) endGame();
+        }, 1000);
+
+        scheduleNextSpawn();
+    }
+
+    function scheduleNextSpawn() {
+        if(!isPlaying) return;
+        
+        spawnTarget();
+        
+        // Difficulty scaling: spawn faster as score increases
+        const minSpawnRate = 350;
+        currentSpawnRate = Math.max(minSpawnRate, 1000 - (score * 25));
+        
+        spawnInterval = setTimeout(scheduleNextSpawn, currentSpawnRate);
+    }
+
+    function spawnTarget() {
+        const target = document.createElement('div');
+        const isBonus = Math.random() < 0.15; // 15% chance for a bonus target (purple)
+        target.className = 'target absolute flex items-center justify-center animate-target-spawn cursor-crosshair touch-none select-none';
+        
+        // Size: smaller as game speeds up
+        const sizeMult = Math.max(0.4, 1 - (score / 80));
+        const baseSize = isBonus ? 40 : 64;
+        const finalSize = baseSize * sizeMult;
+        
+        target.style.width = `${finalSize}px`;
+        target.style.height = `${finalSize}px`;
+
+        // Position avoiding edges gracefully
+        const padding = 10;
+        const maxX = gameArea.clientWidth - finalSize - (padding * 2);
+        const maxY = gameArea.clientHeight - finalSize - (padding * 2);
+        
+        // Ensure constraints
+        if (maxX > 0 && maxY > 0) {
+            target.style.left = `${Math.random() * maxX + padding}px`;
+            target.style.top = `${Math.random() * maxY + padding}px`;
+        } else {
+            // Fallback for very small screens
+            target.style.left = '50%';
+            target.style.top = '50%';
+            target.style.transform = 'translate(-50%, -50%)';
+        }
+
+        target.innerHTML = `
+            <div class="absolute inset-0 ${isBonus ? 'bg-secondary/40' : 'bg-primary/20'} rounded-full blur-md animate-ping" style="animation-duration: ${isBonus ? '1.5s' : '2s'};"></div>
+            <div class="relative w-1/3 h-1/3 ${isBonus ? 'bg-secondary shadow-[0_0_20px_rgba(220,184,255,1)]' : 'bg-primary shadow-[0_0_15px_rgba(165,231,255,1)]'} rounded-full"></div>
+        `;
+
+        // Handle mouse click and mobile touch seamlessly
+        target.onmousedown = (e) => {
+            e.stopPropagation();
+            e.preventDefault();
+            hitTarget(target, isBonus);
+        };
+        target.ontouchstart = (e) => {
+            e.stopPropagation();
+            e.preventDefault();
+            hitTarget(target, isBonus);
+        };
+
+        gameArea.appendChild(target);
+
+        // Target lifetime: disappears faster for bonus targets
+        const lifetime = isBonus ? TARGET_LIFETIME_MS * 0.75 : TARGET_LIFETIME_MS;
+        
+        setTimeout(() => {
+            if(target.parentNode) {
+                target.classList.remove('animate-target-spawn');
+                target.classList.add('opacity-0', 'scale-50', 'transition-all', 'duration-300');
+                setTimeout(() => target.remove(), 300);
+            }
+        }, lifetime);
+    }
+
+    function hitTarget(target, isBonus) {
+        if(!isPlaying) return;
+        score += isBonus ? 3 : 1;
+        updateUI();
+        
+        // Hit visual effect
+        target.innerHTML = '<div class="absolute inset-0 bg-white shadow-[0_0_30px_rgba(255,255,255,1)] rounded-full animate-ping" style="animation-duration: 0.3s;"></div>';
+        target.classList.remove('animate-target-spawn');
+        target.classList.add('scale-150', 'opacity-0', 'transition-all', 'duration-150');
+        setTimeout(() => target.remove(), 150);
+    }
+
+    function missClick() {
+        if(!isPlaying) return;
+        score = Math.max(0, score - 1);
+        updateUI();
+        
+        // Flash entire area red briefly
+        const flash = document.createElement('div');
+        flash.className = 'absolute inset-0 bg-error/10 pointer-events-none transition-opacity duration-150 z-10';
+        gameArea.appendChild(flash);
+        setTimeout(() => {
+             flash.classList.add('opacity-0');
+             setTimeout(() => flash.remove(), 150);
+        }, 50);
+    }
+
+    function updateUI() {
+        scoreEl.innerText = score.toString().padStart(2, '0');
+        timerEl.innerText = timer + 's';
+    }
+
+    function endGame() {
+        isPlaying = false;
+        clearInterval(gameInterval);
+        clearTimeout(spawnInterval);
+        
+        // Clear remaining targets immediately
+        gameArea.querySelectorAll('.target').forEach(t => t.remove());
+        
+        // Show overlay with Game Over UI
+        overlay.classList.remove('opacity-0', 'pointer-events-none');
+        overlayTitle.innerText = "OPERATION COMPLETE";
+        overlayIcon.innerText = "emoji_events";
+        overlayIcon.className = "material-symbols-outlined text-6xl text-secondary mb-4 drop-shadow-[0_0_15px_rgba(220,184,255,0.6)]";
+        
+        finalScoreEl.innerHTML = 'Your sovereign processing speed scored <span class="text-primary font-bold">' + score + '</span>. ' + (score > 25 ? 'Excellent performance.' : 'Keep training.');
+        finalScoreEl.classList.remove('hidden');
+        
+        startBtn.innerText = "RESTART DIAGNOSTIC";
+        startBtn.className = "bg-gradient-to-r from-secondary to-secondary-container text-on-secondary font-bold px-10 py-4 rounded-sm text-lg hover:shadow-[0_0_30px_rgba(220,184,255,0.4)] transition-all";
+        
+        // Update diagnostic score at bottom of page
+        diagnosticScoreEl.innerText = score.toString();
+        if(score >= 25) {
+            diagnosticScoreEl.className = "text-secondary font-bold italic";
+        } else {
+            diagnosticScoreEl.className = "text-error font-bold italic";
+        }
+    }
+</script>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-950 w-full py-12 px-8">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="text-lg font-black text-cyan-500 font-headline uppercase tracking-tighter" style="">
+                Build a Brand
+            </div>
+<div class="text-slate-500 font-['Inter'] text-sm antialiased text-center md:text-left" style="">
+                © 2024 Build a Brand. The Sovereign Interface.
+            </div>
+<div class="flex gap-8">
+<a class="text-slate-500 hover:text-cyan-400 transition-colors font-['Inter'] text-sm" href="#" style=""><br></a>
+<a class="text-slate-500 hover:text-cyan-400 transition-colors font-['Inter'] text-sm" href="#" style=""><br></a>
+<a class="text-slate-500 hover:text-cyan-400 transition-colors font-['Inter'] text-sm" href="#" style=""><br></a>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/5 text-center">
+<p class="text-[10px] uppercase tracking-[0.5em] text-on-surface-variant/40" style="">
+                Performance isn’t a feature — it’s the foundation.
+            </p>
+</div>
+</footer>
+</body></html>
